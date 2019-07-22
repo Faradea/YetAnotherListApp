@@ -4,10 +4,10 @@
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
             app:startDestination="@id/listFragment">
 
-    <fragment android:id="@+id/listFragment" android:name="com.macgavrina.yetanotherlistapp.ListFragment"
+    <fragment android:id="@+id/listFragment" android:name="com.macgavrina.yetanotherlistapp.view.ListFragment"
               android:label="fragment_list" tools:layout="@layout/fragment_list">
         <action android:id="@+id/action_listFragment_to_editItemFragment" app:destination="@id/editItemFragment"/>
     </fragment>
-    <fragment android:id="@+id/editItemFragment" android:name="com.macgavrina.yetanotherlistapp.EditItemFragment"
+    <fragment android:id="@+id/editItemFragment" android:name="com.macgavrina.yetanotherlistapp.view.EditItemFragment"
               android:label="fragment_edit_item" tools:layout="@layout/fragment_edit_item"/>
 </navigation>

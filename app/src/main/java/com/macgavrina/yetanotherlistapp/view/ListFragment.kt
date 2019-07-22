@@ -1,7 +1,5 @@
-package com.macgavrina.yetanotherlistapp
+package com.macgavrina.yetanotherlistapp.view
 
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -9,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
+import com.macgavrina.yetanotherlistapp.R
 import kotlinx.android.synthetic.main.fragment_list.*
 
 class ListFragment : Fragment() {
@@ -22,8 +21,9 @@ class ListFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_list, container, false)
     }
 
-    override fun onResume() {
-        super.onResume()
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+
+        super.onActivityCreated(savedInstanceState)
 
         fragment_list_add_item_button.setOnClickListener {
             Log.d("MyApp", "Add item button is clicked")

@@ -1,4 +1,4 @@
-package com.macgavrina.yetanotherlistapp
+package com.macgavrina.yetanotherlistapp.view
 
 import android.os.Bundle
 import android.util.Log
@@ -11,6 +11,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.findNavController
 import androidx.navigation.ui.navigateUp
+import com.macgavrina.yetanotherlistapp.R
 
 
 class MainActivity : AppCompatActivity() {
