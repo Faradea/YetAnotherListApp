@@ -1,5 +1,6 @@
 package com.macgavrina.yetanotherlistapp.view
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,10 +11,12 @@ import androidx.lifecycle.ViewModelProviders
 import com.macgavrina.yetanotherlistapp.R
 import com.macgavrina.yetanotherlistapp.viewmodel.ListItemsViewModel
 import kotlinx.android.synthetic.main.fragment_edit_item.*
+import org.koin.android.ext.android.inject
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class EditItemFragment : Fragment() {
 
-    private lateinit var viewModel: ListItemsViewModel
+    private val viewModel: ListItemsViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,8 +28,6 @@ class EditItemFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
-        viewModel = ViewModelProviders.of(this).get(ListItemsViewModel::class.java)
 
         fragment_edit_item_done_button.setOnClickListener {
             viewModel.saveListItemButtonIsPressed(fragment_edit_item_name_et.text.toString())

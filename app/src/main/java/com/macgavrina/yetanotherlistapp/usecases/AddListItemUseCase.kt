@@ -3,18 +3,19 @@ package com.macgavrina.yetanotherlistapp.usecases
 import com.macgavrina.yetanotherlistapp.model.ListItem
 import com.macgavrina.yetanotherlistapp.repository.ListItemsRepository
 import io.reactivex.Completable
-import io.reactivex.Single
-import javax.inject.Inject
+import org.koin.core.KoinComponent
+import org.koin.core.inject
 
 
-class AddListItemUseCase {
+class AddListItemUseCase: KoinComponent {
 
-    private var listItemsRepository: ListItemsRepository = ListItemsRepository()
+    private val listItemsRepository: ListItemsRepository by inject()
 
-    @Inject
-    fun AddListItemUseCase(listItemsRepository: ListItemsRepository) {
-        this.listItemsRepository = listItemsRepository
-    }
+    //private var listItemsRepository: ListItemsRepository = ListItemsRepository()
+
+//    fun AddListItemUseCase(listItemsRepository: ListItemsRepository) {
+//        this.listItemsRepository = listItemsRepository
+//    }
 
     fun execute(item: ListItem): Completable {
         return listItemsRepository.addItem(item)

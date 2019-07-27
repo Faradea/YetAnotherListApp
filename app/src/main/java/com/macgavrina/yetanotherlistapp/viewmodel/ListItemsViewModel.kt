@@ -7,11 +7,15 @@ import com.macgavrina.yetanotherlistapp.usecases.AddListItemUseCase
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
+import org.koin.core.KoinComponent
+import org.koin.core.inject
 
 
-class ListItemsViewModel: ViewModel() {
+class ListItemsViewModel : ViewModel(), KoinComponent {
+
 
     private val compositeDisposable = CompositeDisposable()
+    private val addListItemUseCase: AddListItemUseCase by inject()
 
     override fun onCleared() {
         compositeDisposable.clear()
@@ -20,7 +24,7 @@ class ListItemsViewModel: ViewModel() {
     fun saveListItemButtonIsPressed(name: String) {
         val listItem = ListItem(name)
         compositeDisposable.add(
-            AddListItemUseCase().execute(listItem)
+            addListItemUseCase.execute(listItem)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe ({

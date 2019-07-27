@@ -2,9 +2,8 @@ package com.macgavrina.yetanotherlistapp.repository
 
 import com.macgavrina.yetanotherlistapp.model.ListItem
 import io.reactivex.Completable
-import io.reactivex.Single
 
-public class ListItemsRepository() {
+public class ListItemsRepository {
 
 //    public fun getAllItems(): Single<List<ListItem>> {
 //        //ToDo

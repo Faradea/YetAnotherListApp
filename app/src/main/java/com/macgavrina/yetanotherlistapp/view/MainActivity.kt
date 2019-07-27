@@ -8,17 +8,25 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.findNavController
 import androidx.navigation.ui.navigateUp
+import com.macgavrina.yetanotherlistapp.App
 import com.macgavrina.yetanotherlistapp.R
-
+import com.macgavrina.yetanotherlistapp.viewmodel.ListItemsViewModel
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
+
+    //private val viewModel: ListItemsViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
