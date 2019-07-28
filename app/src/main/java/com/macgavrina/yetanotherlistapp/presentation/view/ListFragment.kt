@@ -1,4 +1,4 @@
-package com.macgavrina.yetanotherlistapp.view
+package com.macgavrina.yetanotherlistapp.presentation.view
 
 import android.os.Bundle
 import android.util.Log

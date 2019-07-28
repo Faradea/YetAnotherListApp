@@ -1,17 +1,13 @@
-package com.macgavrina.yetanotherlistapp.view
+package com.macgavrina.yetanotherlistapp.presentation.view
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
 import com.macgavrina.yetanotherlistapp.R
-import com.macgavrina.yetanotherlistapp.viewmodel.ListItemsViewModel
+import com.macgavrina.yetanotherlistapp.presentation.viewmodel.ListItemsViewModel
 import kotlinx.android.synthetic.main.fragment_edit_item.*
-import org.koin.android.ext.android.inject
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class EditItemFragment : Fragment() {
