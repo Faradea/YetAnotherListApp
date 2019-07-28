@@ -2,9 +2,8 @@ package com.macgavrina.yetanotherlistapp.presentation.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
-import com.macgavrina.yetanotherlistapp.domain.usecaseinterfaces.ListItemUseCasesInterface
+import com.macgavrina.yetanotherlistapp.domain.usecaseinterface.ListItemUseCasesInterface
 import com.macgavrina.yetanotherlistapp.presentation.model.ListItem
-import com.macgavrina.yetanotherlistapp.domain.usecases.ListItemUseCaseImpl
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers

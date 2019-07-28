@@ -1,6 +1,7 @@
 package com.macgavrina.yetanotherlistapp.data.repository
 
-import com.macgavrina.yetanotherlistapp.domain.repositoryinterfaces.ListItemsRepositoryInterface
+import com.macgavrina.yetanotherlistapp.data.entity.ListItemEntity
+import com.macgavrina.yetanotherlistapp.domain.repositoryinterface.ListItemsRepositoryInterface
 import com.macgavrina.yetanotherlistapp.presentation.model.ListItem
 import io.reactivex.Completable
 
@@ -14,7 +15,7 @@ public class ListItemsRepositoryImpl: ListItemsRepositoryInterface {
 //        //ToDo
 //    }
 
-    override fun addItem(item: ListItem): Completable {
+    override fun addItem(item: ListItemEntity): Completable {
         return Completable.complete()
     }
 
