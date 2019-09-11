@@ -10,16 +10,16 @@ import androidx.navigation.findNavController
 import com.macgavrina.yetanotherlistapp.R
 import kotlinx.android.synthetic.main.fragment_list.*
 
-class ListFragment : Fragment() {
+class ListFragment : Fragment(R.layout.fragment_list) {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-
-        return inflater.inflate(R.layout.fragment_list, container, false)
-    }
+//    override fun onCreateView(
+//        inflater: LayoutInflater, container: ViewGroup?,
+//        savedInstanceState: Bundle?
+//    ): View? {
+//        // Inflate the layout for this fragment
+//
+//        return inflater.inflate(R.layout.fragment_list, container, false)
+//    }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
 

@@ -13,13 +13,13 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.navigateUp
 import com.macgavrina.yetanotherlistapp.R
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     //private val viewModel: ListItemsViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        //setContentView(R.layout.activity_main)
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
